@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası - Ezan & Namaz Vakitleri</title>
+  <meta name="description" content="Ezan & Namaz Vakitleri uygulamasının gizlilik politikası. Kişisel verilerinizin nasıl toplandığı, kullanıldığı ve korunduğu hakkında bilgi.">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="icon.png" alt="Ezan & Namaz Vakitleri">
+      Ezan & Namaz Vakitleri
+    </a>
+    <button class="menu-toggle" onclick="document.querySelector('.navbar-links').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="navbar-links">
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="contact.html">İletişim</a></li>
+      <li><a href="privacy.html" class="active">Gizlilik Politikası</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <section class="page-header">
+    <h1>Gizlilik Politikası</h1>
+    <p>Kişisel verilerinizin korunması bizim için önemlidir</p>
+  </section>
+
+  <!-- Content -->
+  <div class="content-section">
+
+    <h2>1. Genel Bakış</h2>
+    <p>Ezan & Namaz Vakitleri uygulaması ("Uygulama"), kullanıcılarının gizliliğine saygı gösterir. Bu gizlilik politikası, Uygulamayı kullandığınızda hangi bilgilerin toplandığını, nasıl kullanıldığını ve nasıl korunduğunu açıklamaktadır.</p>
+
+    <h2>2. Toplanan Veriler</h2>
+
+    <p><strong>a) Konum Verileri</strong></p>
+    <p>Uygulama, namaz vakitlerini doğru hesaplayabilmek ve kıble yönünü belirleyebilmek amacıyla cihazınızın konum bilgisine (GPS koordinatları) erişim izni talep eder. Konum verileriniz yalnızca bu amaçlarla kullanılır ve sunucularımızda saklanmaz; cihazınızda yerel olarak işlenir.</p>
+
+    <p><strong>b) Cihaz Sensör Verileri</strong></p>
+    <p>Kıble pusulası özelliği için cihazınızın manyetik sensörü (pusula) ve yön algılayıcıları kullanılır. Bu veriler yalnızca kıble yönünü hesaplamak için gerçek zamanlı olarak işlenir ve kaydedilmez.</p>
+
+    <p><strong>c) Kullanıcı Tercihleri</strong></p>
+    <p>Bildirim ayarları, dil tercihi ve seçilen şehir gibi kullanıcı tercihleri yalnızca cihazınızda yerel olarak (AsyncStorage) saklanır. Bu bilgiler sunucularımıza gönderilmez.</p>
+
+    <p><strong>d) Hesap Bilgileri (İsteğe Bağlı)</strong></p>
+    <p>PRO üyelik özelliklerinden yararlanmak istemeniz durumunda e-posta adresi veya Google/Apple hesap bilgileriniz ile oturum açabilirsiniz. Bu bilgiler güvenli altyapı hizmeti sağlayıcımız (Supabase) üzerinden yönetilir ve yalnızca abonelik durumunuzu doğrulamak amacıyla kullanılır.</p>
+
+    <p><strong>e) Abonelik Bilgileri</strong></p>
+    <p>PRO abonelik durumunuz, abonelik türünüz ve süre bilgileriniz güvenli sunucularımızda saklanır. Ödeme işlemleri doğrudan Apple App Store veya Google Play Store üzerinden gerçekleştirilir; kredi kartı veya ödeme bilgileriniz tarafımızca toplanmaz.</p>
+
+    <h2>3. Verilerin Kullanım Amaçları</h2>
+    <p>Toplanan veriler aşağıdaki amaçlarla kullanılır:</p>
+    <ul>
+      <li>Bulunduğunuz konuma göre doğru namaz vakitlerini göstermek</li>
+      <li>Kıble yönünü belirlemek</li>
+      <li>Namaz vakti bildirimlerini zamanında göndermek</li>
+      <li>Uygulama tercihlerinizi hatırlamak</li>
+      <li>PRO abonelik hizmetlerini yönetmek</li>
+      <li>Uygulamanın performansını iyileştirmek</li>
+    </ul>
+
+    <h2>4. Üçüncü Taraf Hizmetler</h2>
+
+    <p><strong>a) Google AdMob</strong></p>
+    <p>Uygulamanın ücretsiz sürümünde reklam gösterimi için Google AdMob kullanılmaktadır. Google AdMob, reklam kişiselleştirme amacıyla cihaz tanımlayıcıları ve kullanım verileri toplayabilir. Detaylı bilgi için <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>'nı inceleyebilirsiniz. PRO abonelik ile reklamlar kaldırılır.</p>
+
+    <p><strong>b) Supabase</strong></p>
+    <p>Kullanıcı kimlik doğrulama ve abonelik yönetimi için Supabase altyapısı kullanılmaktadır. Supabase, endüstri standardı güvenlik protokollerini uygular. Detaylı bilgi için <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Gizlilik Politikası</a>'nı inceleyebilirsiniz.</p>
+
+    <p><strong>c) Apple App Store ve Google Play Store</strong></p>
+    <p>Uygulama içi satın alma işlemleri ilgili platform mağazaları üzerinden gerçekleştirilir. Bu işlemler sırasında platformların kendi gizlilik politikaları geçerlidir.</p>
+
+    <h2>5. Veri Güvenliği</h2>
+    <p>Kişisel verilerinizin güvenliği için aşağıdaki önlemler alınmaktadır:</p>
+    <ul>
+      <li>Hassas bilgiler (oturum belirteçleri) cihazınızda güvenli depolama alanında (Secure Store) saklanır</li>
+      <li>Sunucu iletişimlerinde şifreli bağlantı (HTTPS) kullanılır</li>
+      <li>Konum verileri cihazınızda yerel olarak işlenir ve sunucuya aktarılmaz</li>
+      <li>Ödeme bilgileriniz tarafımızca hiçbir şekilde toplanmaz veya saklanmaz</li>
+    </ul>
+
+    <h2>6. Bildirimler</h2>
+    <p>Uygulama, namaz vakitlerinde sizi bilgilendirmek amacıyla bildirim gönderebilir. Bildirim izni ilk kullanımda sizden talep edilir ve her vakit için ayrı ayrı açılıp kapatılabilir. Bildirimler tamamen cihaz üzerinde yerel olarak zamanlanır.</p>
+
+    <h2>7. Çocukların Gizliliği</h2>
+    <p>Uygulama, 13 yaş altı çocuklardan bilerek kişisel veri toplamaz. Ebeveynlerin, çocuklarının uygulama kullanımını denetlemesi önerilir.</p>
+
+    <h2>8. Kullanıcı Hakları</h2>
+    <p>Kullanıcı olarak aşağıdaki haklara sahipsiniz:</p>
+    <ul>
+      <li>Konum izinlerini cihaz ayarlarından istediğiniz zaman iptal edebilirsiniz</li>
+      <li>Bildirimleri kapatabilirsiniz</li>
+      <li>Hesabınızın silinmesini talep edebilirsiniz</li>
+      <li>Hakkınızda saklanan verilerin bir kopyasını isteyebilirsiniz</li>
+    </ul>
+    <p>Bu haklarınızı kullanmak için <a href="mailto:burakkocyigit1@gmail.com">burakkocyigit1@gmail.com</a> adresinden bizimle iletişime geçebilirsiniz.</p>
+
+    <h2>9. Politika Değişiklikleri</h2>
+    <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler yapılması halinde uygulama içinden bilgilendirme yapılacaktır. Uygulamayı kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.</p>
+
+    <h2>10. İletişim</h2>
+    <p>Gizlilik politikamız hakkında sorularınız veya talepleriniz için bizimle iletişime geçebilirsiniz:</p>
+    <p><strong>E-posta:</strong> <a href="mailto:burakkocyigit1@gmail.com">burakkocyigit1@gmail.com</a></p>
+
+    <p class="last-updated">Son güncelleme: 22 Şubat 2025</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <ul class="footer-links">
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="contact.html">İletişim</a></li>
+      <li><a href="privacy.html">Gizlilik Politikası</a></li>
+    </ul>
+    <p>&copy; 2025 Ezan & Namaz Vakitleri. Tüm hakları saklıdır.</p>
+  </footer>
+
+</body>
+</html>
