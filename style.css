@@ -300,14 +300,6 @@ a {
   color: var(--white);
 }
 
-.app-icon-img {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  flex-shrink: 0;
-  object-fit: cover;
-}
-
 /* ── App Item ── */
 .app-item {
   display: flex;
