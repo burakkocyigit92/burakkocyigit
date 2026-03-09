@@ -358,31 +358,48 @@ a {
 /* ── Store Badges ── */
 .store-badges {
   display: flex;
-  gap: 0.5rem;
-  margin-top: 8px;
+  gap: 0.6rem;
+  margin-top: 10px;
 }
 
 .store-badge {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #000;
   border-radius: 8px;
-  background: var(--primary-light);
-  color: var(--primary-dark);
-  transition: background 0.2s, color 0.2s, transform 0.2s;
+  border: 1px solid #333;
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 .store-badge:hover {
-  background: var(--primary-dark);
-  color: var(--white);
-  transform: scale(1.1);
+  opacity: 0.85;
+  transform: translateY(-1px);
 }
 
 .store-badge svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.store-badge-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.store-badge-text small {
+  font-size: 0.5rem;
+  color: #ccc;
+  letter-spacing: 0.3px;
+}
+
+.store-badge-text strong {
+  font-size: 0.78rem;
+  color: #fff;
+  font-weight: 600;
 }
 
 .app-item .app-arrow {
