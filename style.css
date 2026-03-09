@@ -349,11 +349,10 @@ a {
   margin-bottom: 4px;
 }
 
-.app-item .app-info .app-desc {
+.app-item .app-info span {
   font-size: 0.82rem;
   color: var(--text-light);
   line-height: 1.6;
-  margin: 0;
 }
 
 /* ── Store Badges ── */
@@ -361,59 +360,46 @@ a {
   display: flex;
   gap: 0.6rem;
   margin-top: 0.75rem;
-  padding-left: calc(56px + 1.25rem);
 }
 
-.store-badge {
+.badge-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
+  gap: 8px;
+  padding: 7px 14px;
   background: #000;
-  border-radius: 8px;
   border: 1px solid #333;
-  transition: opacity 0.2s, transform 0.2s;
+  border-radius: 8px;
+  transition: opacity 0.2s;
 }
 
-.store-badge:hover {
-  opacity: 0.85;
-  transform: translateY(-1px);
+.badge-btn:hover {
+  opacity: 0.8;
 }
 
-.store-badge svg {
+.badge-icon {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
 }
 
-.store-badge-text {
+.badge-label {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
-.store-badge-text small {
-  font-size: 0.5rem;
+.badge-label small {
+  font-size: 0.48rem;
   color: #ccc;
   letter-spacing: 0.3px;
+  font-weight: 400;
 }
 
-.store-badge-text strong {
-  font-size: 0.78rem;
+.badge-label strong {
+  font-size: 0.8rem;
   color: #fff;
   font-weight: 600;
-}
-
-.app-item .app-arrow {
-  font-size: 1.1rem;
-  color: var(--secondary);
-  transition: transform 0.2s, color 0.2s;
-  flex-shrink: 0;
-}
-
-.app-item:hover .app-arrow {
-  transform: translateX(4px);
-  color: var(--primary);
 }
 
 /* ══════════════════════════════════
