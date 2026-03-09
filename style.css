@@ -349,17 +349,19 @@ a {
   margin-bottom: 4px;
 }
 
-.app-item .app-info span {
+.app-item .app-info .app-desc {
   font-size: 0.82rem;
   color: var(--text-light);
   line-height: 1.6;
+  margin: 0;
 }
 
 /* ── Store Badges ── */
 .store-badges {
   display: flex;
   gap: 0.6rem;
-  margin-top: 10px;
+  margin-top: 0.75rem;
+  padding-left: calc(56px + 1.25rem);
 }
 
 .store-badge {
