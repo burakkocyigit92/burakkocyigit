@@ -96,12 +96,13 @@ a {
 
 .tags {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
 .tag {
-  display: inline-block;
+  display: block;
+  text-align: center;
   background: var(--primary-dark);
   color: var(--white);
   padding: 6px 14px;
