@@ -355,6 +355,36 @@ a {
   line-height: 1.6;
 }
 
+/* ── Store Badges ── */
+.store-badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 8px;
+}
+
+.store-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.store-badge:hover {
+  background: var(--primary-dark);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.store-badge svg {
+  width: 18px;
+  height: 18px;
+}
+
 .app-item .app-arrow {
   font-size: 1.1rem;
   color: var(--secondary);
