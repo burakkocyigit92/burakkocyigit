@@ -373,12 +373,14 @@ button.social-link {
   padding: 1rem 1.25rem;
   border-radius: 12px;
   border: 1px solid var(--primary-light);
-  transition: background 0.2s, border-color 0.2s;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .contact-item:hover {
   background: var(--bg);
   border-color: var(--secondary);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 6px 20px rgba(47, 55, 47, 0.08);
 }
 
 .contact-item .contact-icon {
@@ -438,7 +440,12 @@ button.social-link {
   color: var(--white);
   border: 1.5px solid var(--primary-dark);
   z-index: 0;
-  transition: color 0.35s ease;
+  transition: color 0.35s ease, transform 0.2s, box-shadow 0.2s;
+}
+
+.cv-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(47, 55, 47, 0.15);
 }
 
 .cv-btn::before {
@@ -487,12 +494,14 @@ button.social-link {
   padding: 1.25rem;
   border-radius: 12px;
   border: 1px solid var(--primary-light);
-  transition: background 0.2s, border-color 0.2s;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .app-item:hover {
   background: var(--bg);
   border-color: var(--secondary);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 6px 20px rgba(47, 55, 47, 0.08);
 }
 
 .app-item .app-icon {
@@ -540,11 +549,13 @@ button.social-link {
   background: #000;
   border: 1px solid #333;
   border-radius: 8px;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .badge-btn:hover {
-  opacity: 0.8;
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .badge-icon {
