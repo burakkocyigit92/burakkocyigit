@@ -67,7 +67,7 @@
               <span>linkedin.com/in/burakkocyigit</span>
             </div>
           </a>
-          <div class="contact-item" style="cursor: pointer;" onclick="copyEmail(this)">
+          <div class="contact-item">
             <div class="contact-icon email">
               <svg viewBox="0 0 24 24" fill="#4F5D4A"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             </div>
@@ -75,7 +75,9 @@
               <strong>E-mail</strong>
               <span>burakkocyigit1@gmail.com</span>
             </div>
-            <svg class="copy-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4F5D4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            <button class="copy-btn" onclick="copyEmail(this)" title="Copy">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            </button>
           </div>
         </div>
       </div>
@@ -117,11 +119,16 @@
   <script>
     function copyEmail(el) {
       navigator.clipboard.writeText('burakkocyigit1@gmail.com').then(function() {
+        var overlay = document.createElement('div');
+        overlay.className = 'copy-overlay';
+
         var toast = document.createElement('div');
         toast.className = 'copy-toast';
-        toast.textContent = 'Copied!';
+        toast.innerHTML = '<div class="toast-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="toast-title">Copied!</div><div class="toast-sub">burakkocyigit1@gmail.com</div>';
+
+        document.body.appendChild(overlay);
         document.body.appendChild(toast);
-        setTimeout(function() { toast.remove(); }, 1300);
+        setTimeout(function() { overlay.remove(); toast.remove(); }, 1500);
       });
     }
 
