@@ -112,6 +112,35 @@ a {
   letter-spacing: 0.3px;
 }
 
+/* ── Social Links ── */
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-dark);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.social-link:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* ── Content Panel ── */
 .content {
   flex: 1;
