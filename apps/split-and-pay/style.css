@@ -1,3 +1,10 @@
+/* ══════════════════════════════════════════════════════════
+   Split and Pay — web design tokens.
+   Mirrors the app's own design system in
+   Split_and_Pay/src/constants/theme.ts (COLORS / SPACING /
+   BORDER_RADIUS / SHADOWS / FONTS). Keep the two in sync.
+   ══════════════════════════════════════════════════════════ */
+
 * {
   margin: 0;
   padding: 0;
@@ -5,16 +12,43 @@
 }
 
 :root {
-  --primary: #1CC29F;
-  --primary-dark: #0E7C66;
-  --primary-light: #e3f8f2;
-  --text: #2c2c2c;
-  --text-light: #666;
-  --bg: #fafafa;
-  --white: #ffffff;
-  --shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
-  --radius: 12px;
+  /* Primary palette — pink fintech theme */
+  --pink: #F7B5CD;
+  --pink-dark: #E89AB5;
+  --pink-light: #FDF0F5;
+
+  /* Secondary — dark tones (app header + dark balance card) */
+  --charcoal: #2E2829;
+  --charcoal-light: #4A3F40;
+
+  /* Backgrounds */
+  --white: #FFFFFF;
+  --bg-gray: #F5F5F5;
+
+  /* Text */
+  --text: #2E2829;
+  --text-secondary: #666666;
+  --text-light: #757575;
+
+  /* Borders */
+  --border: #E0E0E0;
+  --border-light: #F0F0F0;
+
+  /* Balance semantics — green/red for financial clarity */
+  --owed: #1CC29F;
+  --owes: #E74C3C;
+
+  /* BORDER_RADIUS */
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+  --r-xxl: 24px;
+
+  /* SHADOWS */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.16);
 }
 
 html {
@@ -22,10 +56,11 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color: var(--text);
-  background: var(--bg);
+  background: var(--white);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -33,16 +68,14 @@ a {
   color: inherit;
 }
 
-/* ── Navbar ── */
+/* ── Navbar — mirrors the app's TabHeader (cardDark) ── */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  background: var(--charcoal);
   padding: 0 2rem;
   height: 64px;
   display: flex;
@@ -56,13 +89,14 @@ a {
   gap: 10px;
   font-weight: 700;
   font-size: 1.15rem;
-  color: var(--primary-dark);
+  letter-spacing: -0.5px;
+  color: var(--white);
 }
 
 .navbar-brand img {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-md);
 }
 
 .navbar-right {
@@ -73,23 +107,26 @@ a {
 
 .navbar-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.75rem;
   list-style: none;
 }
 
 .navbar-links a {
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  color: var(--text-light);
+  color: rgba(255, 255, 255, 0.7);
   transition: color 0.2s;
   padding: 4px 0;
   border-bottom: 2px solid transparent;
 }
 
-.navbar-links a:hover,
+.navbar-links a:hover {
+  color: var(--white);
+}
+
 .navbar-links a.active {
-  color: var(--primary);
-  border-bottom-color: var(--primary);
+  color: var(--pink);
+  border-bottom-color: var(--pink);
 }
 
 .menu-toggle {
@@ -104,58 +141,73 @@ a {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--text);
+  background: var(--white);
   margin: 5px 0;
   transition: 0.3s;
-  border-radius: 2px;
+  border-radius: var(--r-sm);
 }
 
-/* ── Hero ── */
-.hero {
-  padding: 140px 2rem 80px;
-  text-align: center;
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-  color: var(--white);
-  position: relative;
+/* ── Language switch ── */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
   overflow: hidden;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 30px 30px;
+.lang-switch a {
+  padding: 5px 12px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: background 0.2s, color 0.2s;
+}
+
+.lang-switch a.active {
+  background: var(--pink);
+  color: var(--charcoal);
+}
+
+.lang-switch a:not(.active):hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+}
+
+/* ── Hero — app home screen: light ground under the dark header ── */
+.hero {
+  padding: 128px 2rem 72px;
+  text-align: center;
+  background: var(--bg-gray);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .hero-content {
-  position: relative;
-  max-width: 700px;
+  max-width: 760px;
   margin: 0 auto;
 }
 
 .hero-icon {
-  width: 100px;
-  height: 100px;
-  border-radius: 24px;
+  width: 84px;
+  height: 84px;
+  border-radius: var(--r-xl);
   margin-bottom: 1.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-md);
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 0.75rem;
+  font-size: 2.125rem;
+  font-weight: 700;
   letter-spacing: -0.5px;
+  margin-bottom: 0.75rem;
+  color: var(--text);
 }
 
 .hero p {
-  font-size: 1.15rem;
-  opacity: 0.9;
-  max-width: 520px;
+  font-size: 1.0625rem;
+  color: var(--text-secondary);
+  max-width: 540px;
   margin: 0 auto 2rem;
   line-height: 1.7;
 }
@@ -163,7 +215,7 @@ a {
 .hero-badges {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 
@@ -171,154 +223,213 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--white);
+  border: 1px solid var(--border);
   padding: 8px 16px;
-  border-radius: 50px;
-  font-size: 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
   font-weight: 500;
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
 }
 
+/* ── Balance cards — the app's signature dark + pink pair ── */
+.balance-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  max-width: 520px;
+  margin: 2.5rem auto 0;
+  text-align: left;
+}
+
+.balance-card {
+  border-radius: var(--r-xl);
+  padding: 1.25rem;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-md);
+}
+
+.balance-card-dark {
+  background: var(--charcoal);
+}
+
+.balance-card-pink {
+  background: var(--pink);
+}
+
+.balance-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.balance-card-dark .balance-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.balance-card-pink .balance-label {
+  color: var(--charcoal);
+}
+
+.balance-amount {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.balance-card-dark .balance-amount {
+  color: var(--owed);
+}
+
+.balance-card-pink .balance-amount {
+  color: var(--charcoal);
+}
+
+.balance-meta {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.balance-card-dark .balance-meta {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.balance-card-pink .balance-meta {
+  color: var(--charcoal-light);
+}
+
+.balance-caption {
+  margin-top: 0.875rem;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+/* ── "Coming soon" pill — styled like the app's Add Expense button ── */
 .store-soon {
   margin-top: 2rem;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(0, 0, 0, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-/* ── Language switch ── */
-.lang-switch {
-  display: inline-flex;
-  align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 50px;
-  overflow: hidden;
-  font-size: 0.78rem;
+  background: var(--pink);
+  color: var(--charcoal);
+  padding: 12px 24px;
+  border-radius: var(--r-xxl);
+  font-size: 0.9375rem;
   font-weight: 600;
-  letter-spacing: 0.3px;
-}
-
-.lang-switch a {
-  padding: 5px 12px;
-  color: var(--text-light);
-  transition: background 0.2s, color 0.2s;
-}
-
-.lang-switch a.active {
-  background: var(--primary);
-  color: var(--white);
-}
-
-.lang-switch a:not(.active):hover {
-  background: var(--primary-light);
-  color: var(--primary-dark);
+  box-shadow: var(--shadow-sm);
 }
 
 /* ── Features ── */
 .features {
-  padding: 80px 2rem;
+  padding: 72px 2rem;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .section-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: var(--primary-dark);
+  letter-spacing: -0.5px;
+  color: var(--text);
   margin-bottom: 0.5rem;
 }
 
 .section-subtitle {
   text-align: center;
-  color: var(--text-light);
+  color: var(--text-secondary);
   margin-bottom: 3rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .feature-card {
   background: var(--white);
-  border-radius: var(--radius);
-  padding: 2rem 1.5rem;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s, box-shadow 0.2s;
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .feature-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
+  border-color: var(--pink);
 }
 
 .feature-icon {
-  width: 48px;
-  height: 48px;
-  background: var(--primary-light);
-  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  background: var(--pink-light);
+  border-radius: var(--r-lg);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   margin-bottom: 1rem;
 }
 
 .feature-card h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: var(--primary-dark);
+  color: var(--text);
 }
 
 .feature-card p {
-  color: var(--text-light);
-  font-size: 0.92rem;
-  line-height: 1.6;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.65;
 }
 
-/* ── Page Header (for sub-pages) ── */
+/* ── Page Header (sub-pages) — the app's dark TabHeader ── */
 .page-header {
-  padding: 120px 2rem 50px;
+  padding: 112px 2rem 48px;
   text-align: center;
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  background: var(--charcoal);
   color: var(--white);
 }
 
 .page-header h1 {
-  font-size: 2.2rem;
+  font-size: 1.875rem;
   font-weight: 700;
+  letter-spacing: -0.5px;
   margin-bottom: 0.5rem;
 }
 
 .page-header p {
-  opacity: 0.85;
-  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
 }
 
 /* ── Content Section ── */
 .content-section {
-  max-width: 800px;
+  max-width: 780px;
   margin: 0 auto;
   padding: 3rem 2rem 4rem;
 }
 
 .content-section h2 {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  color: var(--primary-dark);
-  margin: 2rem 0 0.75rem;
+  letter-spacing: -0.3px;
+  color: var(--text);
+  margin: 2.25rem 0 0.75rem;
 }
 
 .content-section h2:first-child {
@@ -326,13 +437,17 @@ a {
 }
 
 .content-section p {
-  color: var(--text-light);
+  color: var(--text-secondary);
   margin-bottom: 1rem;
   line-height: 1.8;
 }
 
+.content-section strong {
+  color: var(--text);
+}
+
 .content-section ul {
-  color: var(--text-light);
+  color: var(--text-secondary);
   margin: 0.5rem 0 1rem 1.5rem;
   line-height: 1.8;
 }
@@ -341,58 +456,61 @@ a {
   margin-bottom: 0.4rem;
 }
 
+/* Pink is too light to carry link text on white — charcoal text,
+   pink underline. Keeps the brand cue and stays readable. */
 .content-section a {
-  color: var(--primary);
+  color: var(--text);
   font-weight: 500;
-  border-bottom: 1px solid var(--primary);
+  border-bottom: 2px solid var(--pink);
+  transition: background 0.2s;
 }
 
 .content-section a:hover {
-  color: var(--primary-dark);
+  background: var(--pink-light);
 }
 
 .last-updated {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #eee;
-  font-size: 0.85rem;
-  color: #999;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.8125rem;
+  color: var(--text-light);
 }
 
 /* ── Contact Card ── */
 .contact-card {
   background: var(--white);
-  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-xl);
   padding: 2.5rem;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-md);
   text-align: center;
-  max-width: 500px;
-  margin: 3rem auto;
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  max-width: 480px;
+  margin: 2.5rem auto;
 }
 
 .contact-card .contact-icon {
-  width: 64px;
-  height: 64px;
-  background: var(--primary-light);
-  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: var(--pink-light);
+  border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
+  font-size: 1.625rem;
   margin: 0 auto 1.25rem;
 }
 
 .contact-card h3 {
-  font-size: 1.1rem;
+  font-size: 1.0625rem;
   font-weight: 600;
-  color: var(--primary-dark);
+  color: var(--text);
   margin-bottom: 0.5rem;
 }
 
 .contact-card p {
-  color: var(--text-light);
-  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
   margin-bottom: 1.25rem;
 }
 
@@ -400,28 +518,29 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--primary);
-  color: var(--white) !important;
+  background: var(--pink);
+  color: var(--charcoal) !important;
   padding: 12px 24px;
-  border-radius: 50px;
+  border-radius: var(--r-xxl);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   border-bottom: none !important;
-  transition: background 0.2s;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.2s, transform 0.2s;
 }
 
 .contact-email:hover {
-  background: var(--primary-dark);
-  color: var(--white) !important;
+  background: var(--pink-dark);
+  transform: translateY(-2px);
 }
 
 /* ── Footer ── */
 .footer {
-  background: var(--primary-dark);
-  color: rgba(255, 255, 255, 0.7);
+  background: var(--charcoal);
+  color: rgba(255, 255, 255, 0.6);
   text-align: center;
-  padding: 2rem;
-  font-size: 0.85rem;
+  padding: 2.5rem 2rem;
+  font-size: 0.8125rem;
 }
 
 .footer-links {
@@ -430,16 +549,17 @@ a {
   gap: 1.5rem;
   list-style: none;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .footer-links a {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   transition: color 0.2s;
 }
 
 .footer-links a:hover {
-  color: var(--white);
+  color: var(--pink);
 }
 
 /* ── Responsive ── */
@@ -458,12 +578,11 @@ a {
     top: 64px;
     left: 0;
     right: 0;
-    background: var(--white);
+    background: var(--charcoal);
     flex-direction: column;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1.25rem 1rem;
     gap: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-lg);
   }
 
   .navbar-links.open {
@@ -480,11 +599,11 @@ a {
   }
 
   .hero {
-    padding: 120px 1.5rem 60px;
+    padding: 108px 1.25rem 56px;
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
   }
 
   .hero p {
@@ -492,28 +611,45 @@ a {
   }
 
   .hero-icon {
-    width: 80px;
-    height: 80px;
+    width: 72px;
+    height: 72px;
+  }
+
+  .balance-row {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
+
+  .balance-card {
+    min-height: 0;
   }
 
   .features {
-    padding: 50px 1.5rem;
+    padding: 48px 1.25rem;
   }
 
   .features-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
   }
 
   .section-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+
+  .page-header {
+    padding: 100px 1.25rem 40px;
+  }
+
+  .page-header h1 {
+    font-size: 1.625rem;
   }
 
   .content-section {
-    padding: 2rem 1.5rem 3rem;
+    padding: 2rem 1.25rem 3rem;
   }
 
   .contact-card {
-    margin: 2rem 1rem;
+    margin: 2rem 0;
+    padding: 2rem 1.5rem;
   }
 }
