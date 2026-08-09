@@ -486,6 +486,11 @@ button.social-link {
   object-fit: cover;
 }
 
+/* ── App Entry (app item + its own store badges) ── */
+.app-entry + .app-entry {
+  margin-top: 1.5rem;
+}
+
 /* ── App Item ── */
 .app-item {
   display: flex;
@@ -581,6 +586,19 @@ button.social-link {
   font-size: 0.8rem;
   color: #fff;
   font-weight: 600;
+}
+
+.badge-soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px dashed var(--secondary);
+  border-radius: 8px;
+  background: var(--primary-light);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-light);
 }
 
 /* ══════════════════════════════════
