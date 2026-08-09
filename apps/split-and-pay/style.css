@@ -99,6 +99,11 @@ a {
   border-radius: var(--r-md);
 }
 
+/* "Split" keeps the surrounding colour, "& Pay" carries the brand pink */
+.brand-accent {
+  color: var(--pink);
+}
+
 .navbar-right {
   display: flex;
   align-items: center;
