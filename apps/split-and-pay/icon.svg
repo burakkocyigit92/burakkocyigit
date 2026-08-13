@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Split and Pay">
   <rect width="64" height="64" rx="15" fill="#2E2829"/>
-  <path d="M31 16a16 16 0 0 0 0 32z" fill="#F7B5CD"/>
-  <path d="M33 16a16 16 0 0 1 0 32z" fill="#FFFFFF"/>
+  <path d="M31 16a16 16 0 0 0 0 32z" fill="#FFFFFF"/>
+  <path d="M33 16a16 16 0 0 1 0 32z" fill="#F7B5CD"/>
 </svg>
