@@ -34,9 +34,10 @@
   --border: #E0E0E0;
   --border-light: #F0F0F0;
 
-  /* Balance semantics — green/red for financial clarity */
-  --owed: #1CC29F;
-  --owes: #E74C3C;
+  /* Balance semantics — green/red for financial clarity.
+     Same two tones everywhere, whatever the background (theme.ts). */
+  --owed: #0A7D66;
+  --owes: #FF6B5A;
 
   /* BORDER_RADIUS */
   --r-sm: 4px;
@@ -237,7 +238,8 @@ a {
   color: var(--text-secondary);
 }
 
-/* ── Balance cards — the app's signature dark + pink pair ── */
+/* ── Balance cards — the app's Home screen pair:
+      dark "You Owe" on the left, soft pink "You're Owed" on the right ── */
 .balance-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -261,8 +263,10 @@ a {
   background: var(--charcoal);
 }
 
+/* Soft pink, as in the app (solid pink was too harsh there);
+   the card edge comes from the shadow. */
 .balance-card-pink {
-  background: var(--pink);
+  background: var(--pink-light);
 }
 
 .balance-label {
@@ -288,12 +292,13 @@ a {
   letter-spacing: -0.5px;
 }
 
-.balance-card-dark .balance-amount {
-  color: var(--owed);
+/* Amount colour follows the direction, not the card background */
+.balance-amount.owes {
+  color: var(--owes);
 }
 
-.balance-card-pink .balance-amount {
-  color: var(--charcoal);
+.balance-amount.owed {
+  color: var(--owed);
 }
 
 .balance-meta {
@@ -308,29 +313,44 @@ a {
 }
 
 .balance-card-pink .balance-meta {
-  color: var(--charcoal-light);
+  color: var(--text-secondary);
 }
 
-.balance-caption {
-  margin-top: 0.875rem;
+/* `.hero` prefix: a bare class loses to `.hero p` and the caption
+   came out body-sized and glued to the cards */
+.hero .balance-caption {
+  margin: 0.875rem auto 0;
   font-size: 0.75rem;
   color: var(--text-light);
   text-align: center;
 }
 
-/* ── "Coming soon" pill — styled like the app's Add Expense button ── */
+/* ── "Coming soon" pill — styled like the app's Add Expense button:
+      soft pink ground, 1.5px pink border, icon in a solid pink circle ── */
 .store-soon {
   margin-top: 2rem;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--pink);
-  color: var(--charcoal);
-  padding: 12px 24px;
+  background: var(--pink-light);
+  border: 1.5px solid var(--pink);
+  color: var(--text);
+  padding: 10px 24px 10px 12px;
   border-radius: var(--r-xxl);
   font-size: 0.9375rem;
-  font-weight: 600;
-  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+}
+
+.store-soon-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
 }
 
 /* ── Features ── */
