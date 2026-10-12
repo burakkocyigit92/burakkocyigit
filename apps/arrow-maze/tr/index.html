@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Maze: Logic Puzzle</title>
+  <meta name="description" content="Bütün okları tahtadan çıkar. 4000 bölümlü, internetsiz çalışan, ücretsiz ipuçlu, reklamsız ve takipsiz sakin bir mantık bulmacası.">
+  <link rel="icon" type="image/svg+xml" href="../icon.svg">
+  <link rel="alternate" hreflang="en" href="https://www.burakkocyigit.com/apps/arrow-maze/">
+  <link rel="alternate" hreflang="tr" href="https://www.burakkocyigit.com/apps/arrow-maze/tr/">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="../icon.svg" alt="Arrow Maze">
+      <span class="brand-text">Arrow Maze</span>
+    </a>
+    <div class="navbar-right">
+      <ul class="navbar-links">
+        <li><a href="index.html" class="active">Ana Sayfa</a></li>
+        <li><a href="contact.html">İletişim</a></li>
+        <li><a href="privacy.html">Gizlilik Politikası</a></li>
+        <li><a href="terms.html">Hizmet Şartları</a></li>
+      </ul>
+      <div class="lang-switch">
+        <a href="../index.html">EN</a>
+        <a href="index.html" class="active">TR</a>
+      </div>
+      <button class="menu-toggle" onclick="document.querySelector('.navbar-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="../icon.svg" alt="Uygulama İkonu" class="hero-icon">
+      <h1>Arrow Maze</h1>
+      <p class="hero-kicker" lang="en">Logic Puzzle</p>
+      <p class="hero-tagline">Bütün okları tahtadan çıkar.</p>
+      <p>Her yerde oynayabileceğin sakin bir mantık bulmacası. Bir oka dokun; önünde engel yoksa tahtadan kayarak çıkar. Doğru sırayı bul, tahtayı temizle.</p>
+      <div class="hero-badges">
+        <span class="badge">&#129513; 4000 bölüm</span>
+        <span class="badge">&#9992;&#65039; İnternetsiz çalışır</span>
+        <span class="badge">&#128683; Reklam yok</span>
+        <span class="badge">&#127760; 10 dil</span>
+      </div>
+
+      <div class="store-soon">&#128241; App Store ve Google Play'de çok yakında</div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="screens">
+    <h2 class="section-title">Uygulamadan Görüntüler</h2>
+    <p class="section-subtitle">Sade tahtalar, akıcı animasyonlar, gereksiz hiçbir şey yok</p>
+
+    <div class="screens-row">
+      <figure class="screen">
+        <img src="../screens/home.png" alt="Arrow Maze ana ekranı" width="780" height="1688" loading="lazy">
+        <figcaption>Kaldığın yerden devam et</figcaption>
+      </figure>
+      <figure class="screen">
+        <img src="../screens/hard-level.png" alt="Kalp şeklinde zor bir bölüm" width="780" height="1688" loading="lazy">
+        <figcaption>Her 5. bölüm şekilli bir ZOR bölüm</figcaption>
+      </figure>
+      <figure class="screen">
+        <img src="../screens/hint.png" alt="Çıkabilecek bir oku gösteren ipucu" width="780" height="1688" loading="lazy">
+        <figcaption>Takıldın mı? Ücretsiz ipucu çıkabilecek bir oku gösterir</figcaption>
+      </figure>
+      <figure class="screen">
+        <img src="../screens/dark-theme.png" alt="Koyu temada bir bölüm" width="780" height="1688" loading="lazy">
+        <figcaption>Açık, koyu ya da sistem teması</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- How to play -->
+  <section class="how">
+    <div class="how-inner">
+      <h2 class="section-title">Nasıl Oynanır?</h2>
+      <p class="section-subtitle">Üç kural, gerisi sana kalmış</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-board">
+            <svg viewBox="0 0 132 84" aria-hidden="true">
+              <path d="M18 42H66" stroke="#1E2833" stroke-width="5" stroke-linecap="round"/>
+              <path d="M78 42L65 35V49z" fill="#1E2833"/>
+              <path d="M88 42H126" stroke="#128C7E" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 8"/>
+            </svg>
+          </div>
+          <h3>Dokun ve kaydır</h3>
+          <p>Bir oka dokun. Başının önünde hiçbir şey yoksa tahtadan kayarak çıkar.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-board">
+            <svg viewBox="0 0 132 84" aria-hidden="true">
+              <path d="M18 42H52" stroke="#D1453B" stroke-width="5" stroke-linecap="round"/>
+              <path d="M64 42L51 35V49z" fill="#D1453B"/>
+              <path d="M70 42H82" stroke="#D1453B" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7"/>
+              <path d="M90 66V20" stroke="#E29A2D" stroke-width="5" stroke-linecap="round"/>
+              <path d="M90 8L83 21H97z" fill="#E29A2D"/>
+            </svg>
+          </div>
+          <h3>Sıraya dikkat</h3>
+          <p>Yolunda başka bir ok varken ok sıkışır. Önce engelleyeni çıkar. Yanlış dokunuş bir cana mal olur.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-board">
+            <svg viewBox="0 0 132 84" aria-hidden="true">
+              <path d="M18 66H66V18H100" fill="none" stroke="#1E2833" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M112 18L99 11V25z" fill="#128C7E"/>
+            </svg>
+          </div>
+          <h3>Gövde başı izler</h3>
+          <p>Baş hep dümdüz ilerler. Gövde, başın ardından kendi kıvrımları boyunca gider.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2 class="section-title">Özellikler</h2>
+    <p class="section-subtitle">Saf bir bulmaca; araya hiçbir şey girmiyor</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#129513;</div>
+        <h3>4000 Bölüm</h3>
+        <p>Üç oklu ısınma turlarından büyük ve sık tahtalara kadar. Her bölüm yayınlanmadan önce bir çözücüyle kontrol edilir; yani hepsinin bir çözümü vardır.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">&#10084;&#65039;</div>
+        <h3>Her Bölümde Üç Can</h3>
+        <p>Engelli bir oka dokunmak bir cana mal olur; üçü de giderse bölümü yeniden oynarsın. Her 5. bölüm kalp, daire gibi şekillerde büyük bir ZOR bölümdür.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">&#128161;</div>
+        <h3>Ücretsiz İpucu ve Yakınlaştırma</h3>
+        <p>Takıldın mı? İpucu, o an çıkabilecek bir oku parlatır. Büyük tahtalarda iki parmakla yakınlaştırıp kaydır, tek dokunuşla tahtayı yeniden sığdır.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">&#9992;&#65039;</div>
+        <h3>İnternetsiz ve Reklamsız</h3>
+        <p>Hesap yok, reklam yok, takip yok, internet gerekmez. İlerlemen cihazına otomatik kaydedilir; bölümün ortasında bırakıp sonra devam edebilirsin.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">&#127769;</div>
+        <h3>Sana Göre Ayarla</h3>
+        <p>Açık, koyu ya da sistem teması; yüksek kontrast ve hareketi azaltma seçenekleri. Ses ve titreşimi ayrı ayrı kapatabilirsin.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">&#127760;</div>
+        <h3>10 Dil</h3>
+        <p>Türkçe, English, Deutsch, Español, Français, Italiano, Português, Русский, 日本語 ve 한국어. Uygulama cihazının dilini kullanır; istersen Ayarlar'dan değiştirebilirsin.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <ul class="footer-links">
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="contact.html">İletişim</a></li>
+      <li><a href="privacy.html">Gizlilik Politikası</a></li>
+      <li><a href="terms.html">Hizmet Şartları</a></li>
+    </ul>
+    <p>&copy; 2026 Arrow Maze. Tüm hakları saklıdır.</p>
+  </footer>
+
+</body>
+</html>

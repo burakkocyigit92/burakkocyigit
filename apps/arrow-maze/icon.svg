@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Arrow Maze">
+  <rect width="64" height="64" rx="15" fill="#F4F1EA"/>
+  <g fill="#D6CFC2">
+    <circle cx="14.55" cy="18.84" r="1"/><circle cx="28.85" cy="18.84" r="1"/><circle cx="43.16" cy="18.84" r="1"/>
+    <circle cx="14.55" cy="33.14" r="1"/><circle cx="28.85" cy="33.14" r="1"/><circle cx="43.16" cy="33.14" r="1"/>
+    <circle cx="14.55" cy="47.45" r="1"/><circle cx="28.85" cy="47.45" r="1"/><circle cx="43.16" cy="47.45" r="1"/>
+  </g>
+  <path d="M14.55 47.45H28.85V18.84H42.44" fill="none" stroke="#1E2833" stroke-width="4.29" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M51.74 18.84L41.73 13.98V23.7z" fill="#128C7E"/>
+</svg>
