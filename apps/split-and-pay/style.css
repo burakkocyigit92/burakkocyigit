@@ -325,10 +325,57 @@ a {
   text-align: center;
 }
 
+/* ── App Store badge (+ "coming soon" pill beside it) ── */
+.store-row {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px 9px 16px;
+  background: #000;
+  border: 1px solid #333;
+  border-radius: 12px;
+  color: #fff;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.store-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.store-badge svg {
+  flex-shrink: 0;
+}
+
+.store-badge-label {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.store-badge-label small {
+  font-size: 0.6875rem;
+  color: #ccc;
+}
+
+.store-badge-label strong {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
 /* ── "Coming soon" pill — styled like the app's Add Expense button:
       soft pink ground, 1.5px pink border, icon in a solid pink circle ── */
 .store-soon {
-  margin-top: 2rem;
   display: inline-flex;
   align-items: center;
   gap: 8px;
