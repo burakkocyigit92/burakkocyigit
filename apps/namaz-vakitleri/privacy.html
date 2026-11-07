@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gizlilik Politikası - Namaz Vakitleri</title>
-  <meta name="description" content="Namaz Vakitleri uygulamasının gizlilik politikası. Kişisel verilerinizin nasıl toplandığı, kullanıldığı ve korunduğu hakkında bilgi.">
+  <title>Privacy Policy - Prayer Times: Adhan Alerts</title>
+  <meta name="description" content="Privacy policy of the Prayer Times: Adhan Alerts app. Information on how your personal data is collected, used and protected.">
   <link rel="icon" type="image/png" href="icon.png">
+  <link rel="alternate" hreflang="en" href="https://www.burakkocyigit.com/apps/namaz-vakitleri/privacy.html">
+  <link rel="alternate" hreflang="tr" href="https://www.burakkocyigit.com/apps/namaz-vakitleri/tr/privacy.html">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,103 +15,109 @@
   <!-- Navbar -->
   <nav class="navbar">
     <a href="index.html" class="navbar-brand">
-      <img src="icon.png" alt="Namaz Vakitleri">
-      Namaz Vakitleri
+      <img src="icon.png" alt="Prayer Times">
+      Prayer Times
     </a>
-    <button class="menu-toggle" onclick="document.querySelector('.navbar-links').classList.toggle('open')" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="navbar-links">
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="contact.html">İletişim</a></li>
-      <li><a href="privacy.html" class="active">Gizlilik Politikası</a></li>
-      <li><a href="terms.html">Kullanım Şartları</a></li>
-    </ul>
+    <div class="navbar-right">
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html" class="active">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+      </ul>
+      <div class="lang-switch">
+        <a href="privacy.html" class="active">EN</a>
+        <a href="tr/privacy.html">TR</a>
+      </div>
+      <button class="menu-toggle" onclick="document.querySelector('.navbar-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- Header -->
   <section class="page-header">
-    <h1>Gizlilik Politikası</h1>
-    <p>Kişisel verilerinizin korunması bizim için önemlidir</p>
+    <h1>Privacy Policy</h1>
+    <p>Protecting your personal data matters to us</p>
   </section>
 
   <!-- Content -->
   <div class="content-section">
 
-    <h2>1. Genel Bakış</h2>
-    <p>Namaz Vakitleri uygulaması ("Uygulama"), kullanıcılarının gizliliğine saygı gösterir. Bu gizlilik politikası, Uygulamayı kullandığınızda hangi bilgilerin toplandığını, nasıl kullanıldığını ve nasıl korunduğunu açıklamaktadır.</p>
+    <h2>1. Overview</h2>
+    <p>The Prayer Times: Adhan Alerts app (the "App") respects the privacy of its users. This privacy policy explains what information is collected when you use the App, how it is used and how it is protected.</p>
 
-    <h2>2. Toplanan Veriler</h2>
+    <h2>2. Data We Collect</h2>
 
-    <p><strong>a) Konum Verileri</strong></p>
-    <p>Uygulama, namaz vakitlerini doğru hesaplayabilmek ve kıble yönünü belirleyebilmek amacıyla cihazınızın konum bilgisine (GPS koordinatları) erişim izni talep eder. Konum verileriniz yalnızca bu amaçlarla kullanılır ve sunucularımızda saklanmaz; cihazınızda yerel olarak işlenir.</p>
+    <p><strong>a) Location Data</strong></p>
+    <p>To calculate prayer times accurately and determine the qibla direction, the App asks for permission to access your device's location (GPS coordinates). Your location data is used only for these purposes and is not stored on our servers; it is processed locally on your device.</p>
 
-    <p><strong>b) Cihaz Sensör Verileri</strong></p>
-    <p>Kıble pusulası özelliği için cihazınızın manyetik sensörü (pusula) ve yön algılayıcıları kullanılır. Bu veriler yalnızca kıble yönünü hesaplamak için gerçek zamanlı olarak işlenir ve kaydedilmez.</p>
+    <p><strong>b) Device Sensor Data</strong></p>
+    <p>The qibla compass feature uses your device's magnetic sensor (compass) and orientation sensors. This data is processed in real time only to calculate the qibla direction and is not recorded.</p>
 
-    <p><strong>c) Kullanıcı Tercihleri</strong></p>
-    <p>Bildirim ayarları, dil tercihi ve seçilen şehir gibi kullanıcı tercihleri yalnızca cihazınızda yerel olarak (AsyncStorage) saklanır. Bu bilgiler sunucularımıza gönderilmez.</p>
+    <p><strong>c) User Preferences</strong></p>
+    <p>User preferences such as notification settings, language preference and the selected city are stored only locally on your device (AsyncStorage). This information is not sent to our servers.</p>
 
-    <h2>3. Verilerin Kullanım Amaçları</h2>
-    <p>Toplanan veriler aşağıdaki amaçlarla kullanılır:</p>
+    <h2>3. How We Use Data</h2>
+    <p>The data collected is used for the following purposes:</p>
     <ul>
-      <li>Bulunduğunuz konuma göre doğru namaz vakitlerini göstermek</li>
-      <li>Kıble yönünü belirlemek</li>
-      <li>Namaz vakti bildirimlerini zamanında göndermek</li>
-      <li>Uygulama tercihlerinizi hatırlamak</li>
-      <li>Uygulamanın performansını iyileştirmek</li>
+      <li>Showing accurate prayer times for your location</li>
+      <li>Determining the qibla direction</li>
+      <li>Sending prayer time notifications on time</li>
+      <li>Remembering your app preferences</li>
+      <li>Improving the performance of the App</li>
     </ul>
 
-    <h2>4. Üçüncü Taraf Hizmetler</h2>
+    <h2>4. Third-Party Services</h2>
 
     <p><strong>a) Google AdMob</strong></p>
-    <p>Uygulamada reklam gösterimi için Google AdMob kullanılmaktadır. Google AdMob, reklam kişiselleştirme amacıyla cihaz tanımlayıcıları ve kullanım verileri toplayabilir. Detaylı bilgi için <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>'nı inceleyebilirsiniz.</p>
+    <p>The App uses Google AdMob to display ads. Google AdMob may collect device identifiers and usage data for ad personalization. For details, please see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
 
-    <p><strong>b) Apple App Store ve Google Play Store</strong></p>
-    <p>Uygulama ilgili platform mağazaları üzerinden dağıtılmaktadır. Bu platformların kendi gizlilik politikaları geçerlidir.</p>
+    <p><strong>b) Apple App Store and Google Play Store</strong></p>
+    <p>The App is distributed through the respective platform stores. The privacy policies of these platforms apply.</p>
 
-    <h2>5. Veri Güvenliği</h2>
-    <p>Kişisel verilerinizin güvenliği için aşağıdaki önlemler alınmaktadır:</p>
+    <h2>5. Data Security</h2>
+    <p>The following measures are taken to keep your personal data secure:</p>
     <ul>
-      <li>Konum verileri cihazınızda yerel olarak işlenir ve sunucuya aktarılmaz</li>
-      <li>Kullanıcı tercihleri yalnızca cihazınızda saklanır</li>
-      <li>Ödeme bilgileriniz tarafımızca hiçbir şekilde toplanmaz veya saklanmaz</li>
+      <li>Location data is processed locally on your device and is not transferred to a server</li>
+      <li>User preferences are stored only on your device</li>
+      <li>We never collect or store your payment information</li>
     </ul>
 
-    <h2>6. Bildirimler</h2>
-    <p>Uygulama, namaz vakitlerinde sizi bilgilendirmek amacıyla bildirim gönderebilir. Bildirim izni ilk kullanımda sizden talep edilir ve her vakit için ayrı ayrı açılıp kapatılabilir. Bildirimler tamamen cihaz üzerinde yerel olarak zamanlanır.</p>
+    <h2>6. Notifications</h2>
+    <p>The App may send notifications to remind you of prayer times. Notification permission is requested on first use, and notifications can be turned on or off separately for each prayer time. Notifications are scheduled entirely locally on the device.</p>
 
-    <h2>7. Çocukların Gizliliği</h2>
-    <p>Uygulama, 13 yaş altı çocuklardan bilerek kişisel veri toplamaz. Ebeveynlerin, çocuklarının uygulama kullanımını denetlemesi önerilir.</p>
+    <h2>7. Children's Privacy</h2>
+    <p>The App does not knowingly collect personal data from children under the age of 13. Parents are encouraged to supervise their children's use of the App.</p>
 
-    <h2>8. Kullanıcı Hakları</h2>
-    <p>Kullanıcı olarak aşağıdaki haklara sahipsiniz:</p>
+    <h2>8. User Rights</h2>
+    <p>As a user, you have the following rights:</p>
     <ul>
-      <li>Konum izinlerini cihaz ayarlarından istediğiniz zaman iptal edebilirsiniz</li>
-      <li>Bildirimleri kapatabilirsiniz</li>
-      <li>Hakkınızda saklanan verilerin bir kopyasını isteyebilirsiniz</li>
+      <li>You can revoke location permissions at any time from your device settings</li>
+      <li>You can turn off notifications</li>
+      <li>You can request a copy of the data stored about you</li>
     </ul>
-    <p>Bu haklarınızı kullanmak için <a href="mailto:burakkocyigit1@gmail.com">burakkocyigit1@gmail.com</a> adresinden bizimle iletişime geçebilirsiniz.</p>
+    <p>To exercise these rights, you can contact us at <a href="mailto:burakkocyigit1@gmail.com">burakkocyigit1@gmail.com</a>.</p>
 
-    <h2>9. Politika Değişiklikleri</h2>
-    <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler yapılması halinde uygulama içinden bilgilendirme yapılacaktır. Uygulamayı kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.</p>
+    <h2>9. Changes to This Policy</h2>
+    <p>This privacy policy may be updated from time to time. If significant changes are made, you will be notified within the App. By continuing to use the App, you accept the updated policy.</p>
 
-    <h2>10. İletişim</h2>
-    <p>Gizlilik politikamız hakkında sorularınız veya talepleriniz için bizimle iletişime geçebilirsiniz:</p>
-    <p><strong>E-posta:</strong> <a href="mailto:burakkocyigit1@gmail.com">burakkocyigit1@gmail.com</a></p>
+    <h2>10. Contact</h2>
+    <p>For questions or requests about our privacy policy, you can contact us:</p>
+    <p><strong>Email:</strong> <a href="mailto:burakkocyigit1@gmail.com">burakkocyigit1@gmail.com</a></p>
 
-    <p class="last-updated">Son güncelleme: 24 Mart 2026</p>
+    <p class="last-updated">Last updated: March 24, 2026</p>
   </div>
 
   <!-- Footer -->
   <footer class="footer">
     <ul class="footer-links">
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="contact.html">İletişim</a></li>
-      <li><a href="privacy.html">Gizlilik Politikası</a></li>
-      <li><a href="terms.html">Kullanım Şartları</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Use</a></li>
     </ul>
-    <p>&copy; 2026 Namaz Vakitleri. Tüm hakları saklıdır.</p>
+    <p>&copy; 2026 Prayer Times: Adhan Alerts. All rights reserved.</p>
   </footer>
 
 </body>

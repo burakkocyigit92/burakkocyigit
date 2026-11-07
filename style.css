@@ -92,6 +92,7 @@ a {
   padding: 3rem 2.5rem;
   display: flex;
   align-items: flex-start;
+  position: relative;
 }
 
 .sidebar-content {
@@ -645,6 +646,47 @@ button.social-link {
   transform: translateX(-3px);
 }
 
+/* ── Language switch (homepage sidebar + sub-page navbar) ── */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--secondary);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.lang-switch a {
+  padding: 4px 11px;
+  color: var(--text-light);
+  transition: background 0.2s, color 0.2s;
+}
+
+.lang-switch a.active {
+  background: var(--primary-dark);
+  color: var(--white);
+}
+
+.lang-switch a:not(.active):hover {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.sidebar > .lang-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+}
+
+.navbar .lang-switch {
+  margin-left: auto;
+}
+
 /* ── Page Header ── */
 .page-header {
   padding: 130px 2rem 60px;
@@ -1122,5 +1164,13 @@ button.social-link {
 
   .badge-btn {
     justify-content: center;
+  }
+}
+
+/* ── Stacked layout: sidebar text is centred, so the language switch
+      gets its own row above the name instead of overlapping it ── */
+@media (max-width: 900px) {
+  .sidebar {
+    padding-top: 3.25rem;
   }
 }

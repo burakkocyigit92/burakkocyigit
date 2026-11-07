@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>İletişim - Namaz Vakitleri</title>
-  <meta name="description" content="Namaz Vakitleri uygulaması hakkında sorularınız, önerileriniz veya geri bildirimleriniz için bizimle iletişime geçin.">
+  <title>Contact - Prayer Times: Adhan Alerts</title>
+  <meta name="description" content="Get in touch with us for questions, suggestions or feedback about the Prayer Times: Adhan Alerts app.">
   <link rel="icon" type="image/png" href="icon.png">
+  <link rel="alternate" hreflang="en" href="https://www.burakkocyigit.com/apps/namaz-vakitleri/contact.html">
+  <link rel="alternate" hreflang="tr" href="https://www.burakkocyigit.com/apps/namaz-vakitleri/tr/contact.html">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,34 +15,40 @@
   <!-- Navbar -->
   <nav class="navbar">
     <a href="index.html" class="navbar-brand">
-      <img src="icon.png" alt="Namaz Vakitleri">
-      Namaz Vakitleri
+      <img src="icon.png" alt="Prayer Times">
+      Prayer Times
     </a>
-    <button class="menu-toggle" onclick="document.querySelector('.navbar-links').classList.toggle('open')" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="navbar-links">
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="contact.html" class="active">İletişim</a></li>
-      <li><a href="privacy.html">Gizlilik Politikası</a></li>
-      <li><a href="terms.html">Kullanım Şartları</a></li>
-    </ul>
+    <div class="navbar-right">
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+      </ul>
+      <div class="lang-switch">
+        <a href="contact.html" class="active">EN</a>
+        <a href="tr/contact.html">TR</a>
+      </div>
+      <button class="menu-toggle" onclick="document.querySelector('.navbar-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- Header -->
   <section class="page-header">
-    <h1>İletişim</h1>
-    <p>Sorularınız ve geri bildirimleriniz için bize ulaşın</p>
+    <h1>Contact</h1>
+    <p>Reach out to us with your questions and feedback</p>
   </section>
 
   <!-- Content -->
   <div class="content-section">
-    <p style="text-align:center; margin-bottom: 0;">Uygulama hakkında sorularınız, önerileriniz veya karşılaştığınız sorunlar için aşağıdaki e-posta adresi üzerinden bizimle iletişime geçebilirsiniz.</p>
+    <p style="text-align:center; margin-bottom: 0;">For questions or suggestions about the app, or any problems you run into, you can contact us at the email address below.</p>
 
     <div class="contact-card">
       <div class="contact-icon">&#9993;</div>
-      <h3>E-posta ile İletişim</h3>
-      <p>Mesajınıza en kısa sürede dönüş yapılacaktır.</p>
+      <h3>Contact by Email</h3>
+      <p>We will get back to you as soon as possible.</p>
       <a href="mailto:burakkocyigit1@gmail.com" class="contact-email">
         burakkocyigit1@gmail.com
       </a>
@@ -50,12 +58,12 @@
   <!-- Footer -->
   <footer class="footer">
     <ul class="footer-links">
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="contact.html">İletişim</a></li>
-      <li><a href="privacy.html">Gizlilik Politikası</a></li>
-      <li><a href="terms.html">Kullanım Şartları</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Use</a></li>
     </ul>
-    <p>&copy; 2026 Namaz Vakitleri. Tüm hakları saklıdır.</p>
+    <p>&copy; 2026 Prayer Times: Adhan Alerts. All rights reserved.</p>
   </footer>
 
 </body>
