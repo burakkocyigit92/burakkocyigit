@@ -72,13 +72,24 @@ a {
    HOMEPAGE — Split Layout
    ══════════════════════════════════ */
 
+/* ── Top bar (language switch, top-right of the page) ── */
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.25rem 2.5rem 0;
+  animation: fadeInUp 0.6s ease both;
+}
+
 .layout {
   display: flex;
   flex: 1;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 2.5rem;
+  padding: 1rem 2.5rem 2.5rem;
   gap: 2.5rem;
   align-items: stretch;
 }
@@ -92,7 +103,6 @@ a {
   padding: 3rem 2.5rem;
   display: flex;
   align-items: flex-start;
-  position: relative;
 }
 
 .sidebar-content {
@@ -655,13 +665,13 @@ button.social-link {
   overflow: hidden;
   background: var(--white);
   font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
 .lang-switch a {
-  padding: 4px 11px;
+  padding: 5px 12px;
   color: var(--text-light);
   transition: background 0.2s, color 0.2s;
 }
@@ -674,13 +684,6 @@ button.social-link {
 .lang-switch a:not(.active):hover {
   background: var(--primary-light);
   color: var(--primary-dark);
-}
-
-.sidebar > .lang-switch {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1;
 }
 
 .navbar .lang-switch {
@@ -894,9 +897,13 @@ button.social-link {
    ══════════════════════════════════ */
 
 @media (max-width: 900px) {
+  .topbar {
+    padding: 1rem 1.5rem 0;
+  }
+
   .layout {
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 0.75rem 1.5rem 1.5rem;
     gap: 1.5rem;
     min-height: auto;
   }
@@ -909,6 +916,7 @@ button.social-link {
 
   .sidebar-content {
     position: static;
+    width: 100%;
   }
 
   .sidebar .summary {
@@ -986,8 +994,12 @@ button.social-link {
 
 /* ── Small phones ── */
 @media (max-width: 600px) {
+  .topbar {
+    padding: 0.75rem 1rem 0;
+  }
+
   .layout {
-    padding: 1rem;
+    padding: 0.75rem 1rem 1rem;
     gap: 1rem;
   }
 
@@ -1133,6 +1145,10 @@ button.social-link {
 
 /* ── Extra small phones ── */
 @media (max-width: 380px) {
+  .topbar {
+    padding: 0.75rem 0.75rem 0;
+  }
+
   .layout {
     padding: 0.75rem;
   }
@@ -1164,13 +1180,5 @@ button.social-link {
 
   .badge-btn {
     justify-content: center;
-  }
-}
-
-/* ── Stacked layout: sidebar text is centred, so the language switch
-      gets its own row above the name instead of overlapping it ── */
-@media (max-width: 900px) {
-  .sidebar {
-    padding-top: 3.25rem;
   }
 }
