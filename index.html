@@ -171,7 +171,7 @@
         </div>
 
         <div class="app-entry">
-          <a href="https://www.skyluxviptransfer.com/en" target="_blank" rel="noopener" class="app-item">
+          <a href="projects/skylux/" class="app-item">
             <img src="projects/skylux/icon.png" alt="Skylux VIP Transfer" class="app-icon-img">
             <div class="app-info">
               <strong>Skylux VIP Transfer</strong>
@@ -214,6 +214,12 @@
         tab.classList.add('active');
         document.getElementById(tab.dataset.tab).classList.add('active');
       });
+    });
+
+    // A tab name in the URL (#projects for the projects tab) opens that tab, e.g. when coming back from a case study.
+    var wantedTab = location.hash.slice(1) === 'projects' ? 'apps' : location.hash.slice(1);
+    document.querySelectorAll('.tab').forEach(function(tab) {
+      if (wantedTab && tab.dataset.tab === wantedTab) tab.click();
     });
   </script>
 
