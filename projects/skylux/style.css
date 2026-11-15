@@ -1,9 +1,8 @@
 /* ══════════════════════════════════════════════════════════
    Skylux VIP Transfer — case study.
-   Colours and type mirror the Skylux public theme
-   (skyluxviptransfer.com: app/globals.css .theme-public,
-   app/og.png/route.tsx): anthracite, cream, gold;
-   Cormorant Garamond headings, Manrope body.
+   Colours and type follow the Skylux brand:
+   anthracite, cream, gold; Cormorant Garamond headings,
+   Manrope body.
    ══════════════════════════════════════════════════════════ */
 
 *,
@@ -619,29 +618,6 @@ h3 {
     var(--surface);
 }
 
-.split {
-  display: grid;
-  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
-  align-items: center;
-  gap: 48px;
-  margin-top: 44px;
-  padding: 40px;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  background: var(--surface);
-}
-
-.split h3 {
-  margin-top: 16px;
-  font-size: 1.9rem;
-  line-height: 1.15;
-}
-
-.split p:not(.eyebrow) {
-  margin: 14px 0 0;
-  color: var(--muted);
-}
-
 /* My role */
 .delivery {
   display: grid;
@@ -741,76 +717,7 @@ h3 {
   font-size: 0.95rem;
 }
 
-/* Highlights */
-.features {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.feature {
-  padding: 26px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--surface);
-  transition: border-color 0.2s, transform 0.2s;
-}
-
-.feature:hover {
-  border-color: var(--gold-line);
-  transform: translateY(-2px);
-}
-
-.feature svg {
-  width: 26px;
-  height: 26px;
-  color: var(--gold);
-}
-
-.feature h3 {
-  margin-top: 18px;
-  font-family: var(--body);
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.feature p {
-  margin: 8px 0 0;
-  color: var(--muted);
-  font-size: 0.88rem;
-}
-
-.stack-title {
-  margin: 72px 0 20px;
-  color: var(--faint);
-  font-size: 0.74rem;
-  font-weight: 600;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-}
-
-.stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.stack li {
-  padding: 9px 16px;
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  background: var(--surface);
-  font-size: 0.88rem;
-}
-
 /* Closing call to action */
-.section.cta-section {
-  padding-top: 0;
-}
-
 .cta {
   padding: 96px 24px;
   border: 1px solid var(--line);
@@ -945,8 +852,7 @@ h3 {
 /* ── Responsive ── */
 @media (max-width: 1080px) {
   .hero-grid,
-  .delivery,
-  .split {
+  .delivery {
     grid-template-columns: 1fr;
   }
 
@@ -973,10 +879,6 @@ h3 {
 
   .flow::before {
     display: none;
-  }
-
-  .features {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1032,13 +934,11 @@ h3 {
   .pains,
   .duo,
   .flow,
-  .gallery,
-  .features {
+  .gallery {
     grid-template-columns: 1fr;
   }
 
-  .card,
-  .split {
+  .card {
     padding: 24px;
   }
 
